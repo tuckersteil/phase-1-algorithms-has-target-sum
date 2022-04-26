@@ -1,5 +1,13 @@
+//array =[1, 6, 7, 8, 3, 4]
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++){
+    const complement = target - array[i];
+    for (let j = i +1; j < array.length; j++){
+      if (array[j] === complement) return true;
+    }
+  }
+  return false;
+
 }
 
 /* 
@@ -8,6 +16,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  go through array and see if two add up to target number 
+first grab each index and add it to all other numbeers that follow it in array 
+see if any of theose values match target 
 */
 
 /*
